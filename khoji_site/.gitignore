@@ -24,7 +24,7 @@ env
 *.so
 
 # Distribution / packaging
-**/media/**
+media/*
 .Python
 build/
 develop-eggs/
