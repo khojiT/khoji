@@ -2,6 +2,8 @@
 *.pot
 *.pyc
 __pycache__/
+media/pics/*
+media/files/*
 migrations/
 **/migrations/**
 !**/migrations
@@ -24,7 +26,8 @@ env
 *.so
 
 # Distribution / packaging
-media/*
+
+
 .Python
 build/
 develop-eggs/
