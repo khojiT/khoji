@@ -52,75 +52,59 @@
                 </div> -->
             </div>
         </section>
-
-        <section id="one">
-            <div class="container">
-                <div class="one-features">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="section-highlight">
-                                <h2>BEST SPORTS HEADPHONE EVER</h2>
+        {% for pro in project %}
+            {% if forloop.counter|divisibleby:"2" %}
+            <section id="two">
+                <div class="container">
+                    <div class="two-features">
+                        <div class="row">
+                            <div class="col-md-4">
+                            <img src='{{pro.img.url}}' alt="Responsive image" class="img-responsive">
                             </div>
-                            <div class="section-details">
-                                <p>
-                                    Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.
-                                </p>
-                                <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <img src='{% static "assets/images/03_headephone.png" %}' alt="Responsive image" class="img-responsive">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="two">
-            <div class="container">
-                <div class="two-features">
-                    <div class="row">
-                        <div class="col-md-4">
-                        <img src='{% static "assets/images/04_shoe.png" %}' alt="Responsive image" class="img-responsive">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="section-highlight">
-                                <h2>WHY YOU LIKE OUR SHOES?</h2>
-                            </div>
-                            <div class="section-details">
-                                <p>
-                                    Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.
-                                </p>
-                                <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+                            <div class="col-md-8">
+                                <div class="section-highlight">
+                                    <h2>{{pro.subject}}</h2>
+                                </div>
+                                <div class="section-details">
+                                    <p>
+                                        {{pro.description}} {{ forloop.counter }}
+                                    </p>
+                                    <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        
+            {% else %}
+            <section id="one">
+                <div class="container">
+                    <div class="one-features">
+                        <div class="row">
+                            <div class="col-md-8">
+                                
+                                <div class="section-highlight">
+                                    <h2>{{pro.subject}}</h2>
+                                </div>
+                                
+                                <div class="section-details">
+                                    <p>
+                                        {{pro.description}} {{ forloop.counter }}
+                                    </p>
+                                    <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+                                </div>
+                            </div>
 
-        <section id="three">
-            <div class="container">
-                <div class="three-features">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="section-highlight">
-                                <h2>YANKEES BASEBALL CAP</h2>
+                            <div class="col-md-4">
+                                <img src={{pro.img.url}} alt="Responsive image" class="img-responsive">
                             </div>
-                            <div class="section-details">
-                                <p>
-                                    Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.
-                                </p>
-                                <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <img src='{% static "assets/images/05_cap.png" %}' alt="Responsive image" class="img-responsive">
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            {% endif %}
+        {% endfor %}
 
         <section id="four">
                 <div class="container">
@@ -147,7 +131,7 @@
                     </div>
                 </div>
                 
-                <div class="container">
+                <!-- <div class="container">
                     {% for pro in project %}
                     <div class="row">
                         <div class="col-md-6">
@@ -165,49 +149,7 @@
                             </div>
                         </div>
                     {% endfor %}
-                        <!-- <div class="col-md-6">
-                            <div class="four-features four-features-right-bottom">
-                                <img src= '{% static "assets/images/08.jpg"%}'  alt="Responsive image" class="img-responsive">
-                                <div class="features-content">
-                                    <h3>SHOE SERVICES</h3>
-                                    <p>
-                                    Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis Nunc sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla
-                                    </p>
-                                    <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="four-features four-features-left-top">
-                            <img src= '{% static "assets/images/09.jpg" %}'  alt="Responsive image" class="img-responsive">
-                                <div class="features-content">
-                                    <h3>MOUNTAIN VISION</h3>
-                                    <p>
-                                    Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis Nunc sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla
-                                    </p>
-                                    <a href="#" class="btn btn-learn-more">
-                                    LEARN MORE <i class="ion-ios-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="four-features four-features-right-top">
-                                <img src='{% static "assets/images/10.jpg" %}' alt="Responsive image" class="img-responsive">
-                                <div class="features-content">
-                                    <h3>LIFE IN ADVENTURE</h3>
-                                    <p>
-                                    Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis Nunc sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla
-                                    </p>
-                                    <a href="#" class="btn btn-learn-more">
-                                    LEARN MORE <i class="ion-ios-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                        -->
                     <div class="row">
                         <div class="col-md-12">
                             <a href="#" class="btn btn-expand-all">EXPAND ALL</a>
