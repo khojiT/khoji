@@ -2,8 +2,8 @@
 *.pot
 *.pyc
 __pycache__/
-media/pics/*
-media/files/*
+# media/pics/*
+# media/files/*
 
 migrations/
 **/migrations/**
