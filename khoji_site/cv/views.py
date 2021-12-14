@@ -4,4 +4,4 @@ from .models import Project , First
 def index(request):
     Pro = Project.objects.all()
     First_page = First.objects.all()
-    return render(request,'in/index.html',{'project':Pro,'first':First_page})
+    return render(request,'index.html',{'project':Pro,'first':First_page})
