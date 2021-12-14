@@ -1,0 +1,18 @@
+server {
+    listen 80;
+    server_name 127.0.0.1;
+
+  
+    location /static/ {
+        alias /home/mohammad/Desktop/khoji/khoji/khoji_site/static/;
+    }
+    location /media/ {
+        alias /home/mohammad/Desktop/khoji/khoji/khoji_site/media/;
+    }
+
+    location / {
+       # include proxy_params;
+ #       proxy_pass http://unix:/run/gunicorn.sock;
+	proxy_pass http://127.0.0.1:8003/;
+    }
+}
