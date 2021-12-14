@@ -69,6 +69,9 @@ TEMPLATES = [
         },
     },
 ]
+# TEMPLATE_DIRS = (
+#     os.path.join(BASE_DIR, 'tem'),
+# )
 
 WSGI_APPLICATION = 'khoji_site.wsgi.application'
 
