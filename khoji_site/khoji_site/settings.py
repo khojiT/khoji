@@ -57,7 +57,7 @@ ROOT_URLCONF = 'khoji_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["tem"],
+        'DIRS': [os.path.join(BASE_DIR, 'tem')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
